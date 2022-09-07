@@ -17,11 +17,11 @@ Name2 Name2:
   twitter     : "name2"
   google_plus : "Name"
 
-Ze Jiang:
-  name             : "Ze Jiang"
+Xi Weng:
+  name             : "Xi Weng"
   avatar           : "profile.png"
-  bio              : "Ph.D. Candidate @UNSW, expert in statistical hydrology"
-  location         : "Sydney, Australia"
+  bio              : "Master BUAA, expert in Self-supervised Learning"
+  location         : "Beijing, China"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
