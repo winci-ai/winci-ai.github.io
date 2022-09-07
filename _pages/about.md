@@ -14,7 +14,7 @@ This is Winci's personal homepage.
 I am a Master student in BUAA, Beijing, China.
 
 <b>Research Interests:</b>
-* Computer Vision
+* Computer Vision and Machine Learning
 * Self-supervised learning
 
 
