@@ -83,10 +83,10 @@ author:
   name             : "Winci"
   avatar           : "profile.jpg"
   bio              : "Master student in BUAA, Beijing, China"
-  location         : "Sydney, Australia"
-  employer         :
+  location         : "Beijing, China"
+  mentor           : "Lei Huang"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "https://scholar.google.com/citations?user=4iVouPYAAAAJ&hl=en"
+  googlescholar    : 
   email            : "winci@buaa.edu.cn"
   researchgate     : 
   publons          : 
