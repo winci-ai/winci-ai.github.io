@@ -29,7 +29,7 @@ This is Winci's personal homepage.
 
 ## For more information
 <b>education experience:</b>
-> 2018-2022: Undergraduate of Beihang University.
-> 2022-2025: Postgraduate of Beihang University.
+> 2018-2022: Undergraduate of Beijing University of Aeronautics and Astronautic (BUAA).
+> 2022-2025: Postgraduate of Beijing University of Aeronautics and Astronautic (BUAA).
 
 The lab where I study and work is in D106, BUAA.
