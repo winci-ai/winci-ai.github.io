@@ -20,7 +20,7 @@ I'm very happy to meet you, please contact me by email **winci@buaa.edu.cn**. <b
 <b>Research Interests:</b>
 * Machine Learning
 * Self-supervised learning<br>
-* My mentor is Professor **Huang Lei** [page link](https://huangleibuaa.github.io).
+* My mentor is Professor **Lei Huang** [page link](https://huangleibuaa.github.io).
 
 <b>Research Highlights:</b>
 * In **15 Sept 2022**, one paper named **An Investigation into Whitening Loss for Self-supervised Learning** was accepted by **NeurIPS 2022**. <br>
