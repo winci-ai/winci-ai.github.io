@@ -19,12 +19,12 @@ This is Winci's personal homepage.
 
 <b>Research Interests:</b>
 * Machine Learning
-* Self-supervised learning<br>
+* Self-supervised Learning<br>
 
 <b>Research Highlights:</b>
 > * In **15 Sept 2022**, one paper named **An Investigation into Whitening Loss for Self-supervised Learning** was accepted by **NeurIPS 2022**. <br>
 
-## Selected Journal Publications
+## Selected Publications
 
 ## For more information
 <b>education experience:</b>
