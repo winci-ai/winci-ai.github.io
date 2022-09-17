@@ -28,4 +28,8 @@ This is Winci's personal homepage.
 ## Selected Journal Publications
 
 ## For more information
+<b>education experience:</b>
+> 2018-2022: Undergraduate of Beihang University.
+> 2022-2025: Postgraduate of Beihang University.
+
 The lab where I study and work is in D106, BUAA.
