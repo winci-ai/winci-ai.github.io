@@ -20,7 +20,6 @@ This is Winci's personal homepage.
 <b>Research Interests:</b>
 * Machine Learning
 * Self-supervised learning<br>
-> My mentor is Professor **Lei Huang** [page link](https://huangleibuaa.github.io).
 
 <b>Research Highlights:</b>
 > * In **15 Sept 2022**, one paper named **An Investigation into Whitening Loss for Self-supervised Learning** was accepted by **NeurIPS 2022**. <br>
@@ -29,7 +28,13 @@ This is Winci's personal homepage.
 
 ## For more information
 <b>education experience:</b>
-> 2018-2022: Undergraduate of Beijing University of Aeronautics and Astronautic (BUAA).
-> 2022-2025: Postgraduate of Beijing University of Aeronautics and Astronautic (BUAA).
+> * 2022 - now
+    * Master student in Artificial Intelligence, Institute of Artificial Intelligence, Beihang University
+    * Mentor: Profs. [**Lei Huang**](https://huangleibuaa.github.io).
+
+> * 2018 - 2022
+    * Bachelor in Artificial Intelligence, Institute of Artificial Intelligence, Beihang University
+    * Mentor: Profs. [**Lei Huang**](https://huangleibuaa.github.io).
+
 
 The lab where I study and work is in D106, BUAA.
