@@ -18,8 +18,7 @@ I am a Master student in BUAA, Beijing, China. My hobbies are **music, fitness a
 * Self-supervised learning
 
 <b>Research Highlights:</b>
-
-In **15 Sept 2022**, one paper named **An Investigation into Whitening Loss for Self-supervised Learning** was accepted by **NeurIPS 2022**.
+* In **15 Sept 2022**, one paper named **An Investigation into Whitening Loss for Self-supervised Learning** was accepted by **NeurIPS 2022**.
 
 ## Selected Journal Publications
 
