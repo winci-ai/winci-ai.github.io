@@ -21,7 +21,7 @@ This is Winci's personal homepage.
 * Machine Learning
 * Self-supervised Learning<br>
 
-<b>Research Highlights:</b>
+<b>$\color{#FF0000}{Research progress}:</b>
 > * In **15 Sept 2022**, one paper named **An Investigation into Whitening Loss for Self-supervised Learning** was accepted by **NeurIPS 2022**. <br>
 
 ## Selected Publications
