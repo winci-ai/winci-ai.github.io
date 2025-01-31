@@ -31,8 +31,8 @@
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             border: 4px solid white;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
@@ -92,9 +92,10 @@
             text-align: center;
         }
 
+        /* 调整论文图片尺寸 */
         .paper-thumbnail {
             width: 100%;
-            height: 180px;
+            height: 140px;  /* 减小图片高度 */
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 1rem;
@@ -109,6 +110,12 @@
             background: var(--secondary-color);
             color: white;
             font-weight: 500;
+        }
+
+        .coauthor-badge {
+            background: var(--accent-color);
+            font-size: 0.8em;
+            vertical-align: super;
         }
 
         @media (max-width: 768px) {
@@ -162,7 +169,7 @@
                         <img src="https://github.com/winci-ai/resa/releases/download/figure/postive-feedback.jpg" 
                              class="paper-thumbnail" alt="Clustering Properties">
                         <h5>Clustering Properties of Self-Supervised Learning</h5>
-                        <div class="text-muted small mb-2">arXiv:2501.18452</div>
+                        <div class="text-muted small mb-2">Xi Weng, Jianing An, et al. | arXiv:2501.18452</div>
                         <div class="d-flex gap-2">
                             <a href="https://arxiv.org/abs/2501.18452" class="btn btn-sm btn-outline-primary">
                                 <i class="fas fa-file-pdf"></i> Paper
@@ -174,8 +181,113 @@
                     </div>
                 </div>
 
-                <!-- Add other publications following the same pattern -->
+                <!-- Publication Item 2 -->
+                <div class="col-md-6 mb-4">
+                    <div class="publication-item">
+                        <img src="./img/tinyllava_vedio.jpg" 
+                             class="paper-thumbnail" alt="TinyLLaVA-Video">
+                        <h5>TinyLLaVA-Video: Video Understanding Framework</h5>
+                        <div class="text-muted small mb-2">Xingjian Zhang, Xi Weng, et al. | arXiv:2501.15513</div>
+                        <div class="d-flex gap-2">
+                            <a href="https://arxiv.org/abs/2501.15513" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-file-pdf"></i> Paper
+                            </a>
+                            <a href="https://github.com/ZhangXJ199/TinyLLaVA-Video" class="btn btn-sm btn-outline-success">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Publication Item 3 -->
+                <div class="col-md-6 mb-4">
+                    <div class="publication-item">
+                        <img src="./img/tinyllava_factory.png" 
+                             class="paper-thumbnail" alt="TinyLLaVA Factory">
+                        <h5>TinyLLaVA Factory: Modular Codebase for MLLMs <span class="badge coauthor-badge">co-first</span></h5>
+                        <div class="text-muted small mb-2">Junlong Jia, Ying Hu, Xi Weng, et al. | arXiv:2405.11788</div>
+                        <div class="d-flex gap-2">
+                            <a href="https://arxiv.org/pdf/2405.11788" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-file-pdf"></i> Paper
+                            </a>
+                            <a href="https://github.com/TinyLLaVA/TinyLLaVA_Factory" class="btn btn-sm btn-outline-success">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication Item 4 -->
+                <div class="col-md-6 mb-4">
+                    <div class="publication-item">
+                        <img src="./img/tinyllava.png" 
+                             class="paper-thumbnail" alt="TinyLLaVA">
+                        <h5>TinyLLaVA: Small-scale Multimodal Models</h5>
+                        <div class="text-muted small mb-2">Baichuan Zhou, Ying Hu, Xi Weng, et al. | arXiv:2402.14289</div>
+                        <div class="d-flex gap-2">
+                            <a href="https://arxiv.org/abs/2402.14289" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-file-pdf"></i> Paper
+                            </a>
+                            <a href="https://github.com/DLCV-BUAA/TinyLLaVABench" class="btn btn-sm btn-outline-success">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication Item 5 -->
+                <div class="col-md-6 mb-4">
+                    <div class="publication-item">
+                        <img src="./img/iclr2024_poster.jpg" 
+                             class="paper-thumbnail" alt="ICLR 2024">
+                        <h5>Modulate Your Spectrum in SSL</h5>
+                        <div class="text-muted small mb-2">Xi Weng, Yunhao Ni, et al. | ICLR 2024</div>
+                        <div class="d-flex gap-2">
+                            <a href="https://arxiv.org/abs/2305.16789" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-file-pdf"></i> Paper
+                            </a>
+                            <a href="https://github.com/winci-ai/INTL" class="btn btn-sm btn-outline-success">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication Item 6 -->
+                <div class="col-md-6 mb-4">
+                    <div class="publication-item">
+                        <img src="./img/tpami2024.jpg" 
+                             class="paper-thumbnail" alt="TPAMI 2024">
+                        <h5>Understanding Whitening Loss in SSL</h5>
+                        <div class="text-muted small mb-2">Lei Huang, Yunhao Ni, Xi Weng, et al. | TPAMI 2024</div>
+                        <div class="d-flex gap-2">
+                            <a href="https://www.computer.org/csdl/journal/tp/5555/01/10568417/1XXinr7o9IA" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-file-pdf"></i> Paper
+                            </a>
+                            <a href="https://github.com/winci-ai/CW-RGP" class="btn btn-sm btn-outline-success">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication Item 7 -->
+                <div class="col-md-6 mb-4">
+                    <div class="publication-item">
+                        <img src="./img/nips2022_poster.png" 
+                             class="paper-thumbnail" alt="NeurIPS 2022">
+                        <h5>Investigation into Whitening Loss <span class="badge coauthor-badge">Spotlight</span></h5>
+                        <div class="text-muted small mb-2">Xi Weng, Lei Huang, et al. | NeurIPS 2022</div>
+                        <div class="d-flex gap-2">
+                            <a href="https://arxiv.org/abs/2210.03586" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-file-pdf"></i> Paper
+                            </a>
+                            <a href="https://github.com/winci-ai/CW-RGP" class="btn btn-sm btn-outline-success">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -187,10 +299,26 @@
                     <i class="fas fa-angle-right"></i>
                     <div>
                         <h5 class="mb-1">Ph.D. in Computer Science</h5>
-                        <p class="mb-0 text-muted">National University of Singapore (2025-Present)</p>
+                        <p class="mb-0 text-muted">National University of Singapore (2025-Present)<br>
+                        Advisor: Prof. Jin-Song Dong</p>
                     </div>
                 </li>
-                <!-- Add other education items -->
+                <li>
+                    <i class="fas fa-angle-right"></i>
+                    <div>
+                        <h5 class="mb-1">M.Sc. in Artificial Intelligence</h5>
+                        <p class="mb-0 text-muted">Beihang University (2022-2024)<br>
+                        Advisor: Prof. Lei Huang</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-angle-right"></i>
+                    <div>
+                        <h5 class="mb-1">B.Eng. in Artificial Intelligence</h5>
+                        <p class="mb-0 text-muted">Beihang University (2018-2022)<br>
+                        Advisor: Prof. Lei Huang</p>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -200,10 +328,56 @@
             <ul class="icon-list list-unstyled">
                 <li>
                     <i class="fas fa-trophy"></i>
+                    Excellent Graduation Thesis of Beihang University (2024)
+                </li>
+                <li>
+                    <i class="fas fa-trophy"></i>
+                    Outstanding Graduate of Beihang University (2024)
+                </li>
+                <li>
+                    <i class="fas fa-trophy"></i>
                     China National Scholarship (2023)
                 </li>
-                <!-- Add other awards -->
+                <li>
+                    <i class="fas fa-trophy"></i>
+                    Excellent Academic Innovation Achievement Award (2023)
+                </li>
             </ul>
+        </div>
+
+        <!-- Source Code Section -->
+        <div class="section-card">
+            <h2 class="mb-4"><i class="fas fa-code me-2"></i>Source Code</h2>
+            <ul class="icon-list list-unstyled">
+                <li>
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/winci-ai/resa">ReSA</a> - Official implementation of ReSA
+                </li>
+                <li>
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/winci-ai/INTL">INTL</a> - Implementation of INTL
+                </li>
+                <li>
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/winci-ai/CW-RGP">CW-RGP</a> - Whitening loss implementation
+                </li>
+            </ul>
+        </div>
+
+        <!-- Coauthors Section -->
+        <div class="section-card">
+            <h2 class="mb-4"><i class="fas fa-users me-2"></i>Main Collaborators</h2>
+            <div class="d-flex flex-wrap gap-3">
+                <a href="https://www.comp.nus.edu.sg/~dongjs/" class="btn btn-outline-secondary">
+                    <i class="fas fa-user-tie"></i> Jin-Song Dong
+                </a>
+                <a href="https://huangleibuaa.github.io/" class="btn btn-outline-secondary">
+                    <i class="fas fa-user-graduate"></i> Lei Huang
+                </a>
+                <a href="https://sites.google.com/view/fahadkhans/home?pli=1" class="btn btn-outline-secondary">
+                    <i class="fas fa-user-astronaut"></i> Fahad Khan
+                </a>
+            </div>
         </div>
     </div>
 
