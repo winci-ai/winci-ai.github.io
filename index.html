@@ -1,135 +1,185 @@
 <!DOCTYPE html>
-<html lang="en" class="winci">
+<html lang="en">
 <head>
   <meta charset="utf-8">
+
+  <!-- 让移动端优先进行自适应 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to Winci's homepage</title>
-  <!-- Bootstrap CSS -->
+
+  <!-- 引入 Bootstrap -->
   <link rel="stylesheet" href="./layout/bootstrap.min.css">
-  <!-- 自定义样式文件 -->
-  <link rel="stylesheet" href="./layout/styles.css">
   
-  <meta name="description" content="">
-  <meta name="author" content="Winci">
-  
+  <!-- 引入 Google Font：Roboto -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- 这里可以引入你自定义的样式文件。如果没有就使用下面的内联样式示例 -->
+  <!-- <link rel="stylesheet" href="./layout/styles.css"> -->
+
   <script src="./Welcome to Winci&#39;s homepage_files/jquery.min.js"></script>
   <script src="./layout/bootstrap.min.js"></script>
 
+  <meta name="description" content="">
+  <meta name="author" content="Winci">
+
   <style>
-    /* 你也可以将这些样式写入 ./layout/styles.css 中 */
+    /* ======= 全局样式 ======= */
     body {
-      font-family: "Times New Roman", serif;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5; /* 柔和的背景色 */
+      margin: 0;
+      padding: 0;
     }
 
+    /* ======= 导航栏样式 ======= */
     .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #333 !important;
+    }
+    .nav-link {
+      color: #555 !important;
+      font-weight: 500;
+    }
+
+    /* ======= Hero 区 ======= */
+    .hero {
+      /* 可以换成你想要的图片或纯色，也可以用渐变色 */
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #ffffff;
+      padding: 80px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .hero h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.3rem;
       margin-bottom: 0;
     }
 
-    .hero {
-      background: #f8f9fa;
-      padding: 40px 0;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #333;
-    }
-
+    /* ======= info-section，每个版块的外层容器 ======= */
     .info-section {
-      padding: 40px 0;
-    }
-
-    .info-section h3 {
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    /* 卡片样式可自行调整 */
-    .paper-card {
-      margin-bottom: 20px;
-    }
-
-    .paper-card .card-title {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    .paper-card .card-text {
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    .paper-card img {
-      width: 100%;
-      max-height: 120px;
-      object-fit: cover;
-    }
-
-    .paper-links a {
-      margin-right: 10px;
-      font-size: 0.9rem;
-    }
-
-    .footer {
-      padding: 20px 0;
-      background: #f8f9fa;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    /* 新闻公告的样式 */
-    .news-item {
-      list-style: none;
-      margin-bottom: 10px;
-    }
-
-    .news-item strong {
-      color: red;
-    }
-
-    /* 教育/荣誉列表的样式 */
-    .custom-list {
-      padding-left: 20px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      padding: 30px;
       margin-bottom: 30px;
+    }
+    .info-section h3 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    /* ======= 自定义列表样式 ======= */
+    .custom-list {
+      list-style-type: disc;
+      margin-left: 1.2rem;
     }
     .custom-list li {
       margin-bottom: 10px;
     }
 
-    .navbar-brand {
-      font-weight: 700;
+    /* ======= 个人照片 ======= */
+    .profile-pic {
+      max-width: 240px;
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin-top: 20px;
+    }
+
+    /* ======= 新闻的简单高亮 ======= */
+    .news-item {
+      margin-bottom: 10px;
+    }
+    .news-item strong {
+      color: #ff0000;
+    }
+
+    /* ======= 论文卡片区域 ======= */
+    .paper-card {
+      margin-bottom: 30px;
+    }
+    .paper-card .card {
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .paper-card .card-img-top {
+      /* 让图片更大、更好看一些，如果比例怪异可自己再调 */
+      max-height: 200px;
+      object-fit: cover;
+    }
+    .paper-card .card-body {
+      padding: 20px;
+    }
+    .paper-card .card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .paper-card .card-text {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    .paper-links a {
+      margin-right: 15px;
+      font-weight: 500;
+      color: #4c62a1;
+    }
+    .paper-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ======= 底部页脚 ======= */
+    .footer {
+      background: #ffffff;
+      color: #777;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      font-size: 0.9rem;
     }
   </style>
 
   <script>
     $(function(){
-      // 若有轮播图，则启用
-      $('#carousel-example-generic').carousel();
+      // 若有轮播图或其他需要Bootstrap JS的效果，请在此初始化
+      // $('#carousel-example-generic').carousel();
     });
   </script>
 </head>
 
 <body>
 
-<!-- 导航栏 -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- ====================== 导航栏 ====================== -->
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container">
     <a class="navbar-brand" href="#">Winci</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" 
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarContent" aria-controls="navbarContent" 
             aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon">≡</span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#publication">Publication</a></li>
+        <li class="nav-item"><a class="nav-link" href="#publication">Publications</a></li>
         <li class="nav-item"><a class="nav-link" href="#edu">Education</a></li>
         <li class="nav-item"><a class="nav-link" href="#AH">Awards</a></li>
         <li class="nav-item"><a class="nav-link" href="#CODE">Source Code</a></li>
@@ -138,55 +188,52 @@
   </div>
 </nav>
 
-<!-- 主页头部介绍（Hero Section） -->
+<!-- ====================== Hero 区，顶部介绍 ====================== -->
 <div class="hero">
   <div class="container">
     <h1>Welcome to Winci's homepage</h1>
-    <p class="lead">PhD student @ School of Computing, National University of Singapore</p>
+    <p>PhD student @ School of Computing, National University of Singapore</p>
     <p>
-      <strong>Email:</strong> xi.w@u.nus.edu &nbsp; | &nbsp; 
-      <strong>Github:</strong> <a href="https://github.com/winci-ai">github.com/winci-ai</a>
+      <strong>Email:</strong> xi.w@u.nus.edu &nbsp; | &nbsp;
+      <strong>Github:</strong> <a style="color:#fff; text-decoration: underline;" href="https://github.com/winci-ai">github.com/winci-ai</a>
     </p>
   </div>
 </div>
 
-<!-- 基本信息 + 个人照片 -->
+<!-- ====================== 基本信息区 ====================== -->
 <div class="container info-section">
   <div class="row">
-    <!-- 文字介绍 -->
     <div class="col-md-8">
       <h3>About Me</h3>
       <p>
         My name is <strong>Xi Weng</strong>, and you can call me <strong>Winci</strong>. 
-        I am currently a first-year PhD student in Computer Science at NUS, under the supervision of 
+        I am currently a first-year PhD student at the School of Computing, NUS, under the supervision of 
         Prof. <a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a>. 
-        Prior to this, I earned both my Bachelor's and Master's degrees from the School of Artificial Intelligence 
+        Prior to this, I earned both the Bachelor's and Master's degree from the School of Artificial Intelligence 
         at Beihang University, supervised by Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a>. 
         My primary research interests lie in self-supervised learning and multimodal pre-training.
       </p>
       <ul class="custom-list">
-        <li><strong>NEWS (June 2024):</strong> One paper is accepted by TPAMI.</li>
-        <li><strong>NEWS (Jan 2024):</strong> One paper is accepted by ICLR 2024.</li>
-        <li><strong>NEWS (Sep 2022):</strong> One paper is accepted by NeurIPS 2022 (spotlight).</li>
+        <li class="news-item"><strong>NEWS</strong> (June 2024): One paper is accepted by TPAMI.</li>
+        <li class="news-item"><strong>NEWS</strong> (Jan 2024): One paper is accepted by ICLR 2024.</li>
+        <li class="news-item"><strong>NEWS</strong> (Sep 2022): One paper is accepted by NeurIPS 2022 (spotlight).</li>
       </ul>
     </div>
-    <!-- 个人照片 -->
     <div class="col-md-4 text-center">
-      <img src="./winci.jpg" class="img-fluid rounded" alt="Winci's photo" style="max-width: 200px;">
+      <img src="./winci.jpg" class="profile-pic" alt="Winci's photo">
     </div>
   </div>
 </div>
 
-<!-- Publications -->
+<!-- ====================== Publications ====================== -->
 <div class="container info-section" id="publication">
   <h3>Publications</h3>
   <div class="row">
-
-    <!-- 第一篇论文 -->
+    <!-- Example: 这里为了更好看，给每篇论文占一半宽度 -->
     <div class="col-md-6 paper-card">
       <div class="card">
-        <img src="https://github.com/winci-ai/resa/releases/download/figure/postive-feedback.jpg" 
-             class="card-img-top" alt="Paper1 image">
+        <img src="https://github.com/winci-ai/resa/releases/download/figure/postive-feedback.jpg"
+             class="card-img-top" alt="Paper image 1">
         <div class="card-body">
           <h5 class="card-title">Clustering Properties of Self-Supervised Learning</h5>
           <p class="card-text">
@@ -202,10 +249,9 @@
       </div>
     </div>
 
-    <!-- 第二篇论文 -->
     <div class="col-md-6 paper-card">
       <div class="card">
-        <img src="./img/tinyllava_vedio.jpg" class="card-img-top" alt="Paper2 image">
+        <img src="./img/tinyllava_vedio.jpg" class="card-img-top" alt="Paper image 2">
         <div class="card-body">
           <h5 class="card-title">
             TinyLLaVA-Video: A Simple Framework of Small-scale Large Multimodal Models for Video Understanding
@@ -223,17 +269,16 @@
       </div>
     </div>
 
-    <!-- 第三篇论文 -->
     <div class="col-md-6 paper-card">
       <div class="card">
-        <img src="./img/tinyllava_factory.png" class="card-img-top" alt="Paper3 image">
+        <img src="./img/tinyllava_factory.png" class="card-img-top" alt="Paper image 3">
         <div class="card-body">
           <h5 class="card-title">
             TinyLLaVA Factory: A Modularized Codebase for Small-scale Large Multimodal Models
           </h5>
           <p class="card-text">
             <strong>Authors:</strong> Junlong Jia, Ying Hu, <strong>Xi Weng</strong>, Yiming Shi, Miao Li, 
-            Xingjian Zhang, Baichuan Zhou, Ziyu Liu, Jie Luo, Lei Huang, Ji Wu<br>
+            Xingjian Zhang, Baichuan Zhou, Ziyu Liu, Jie Luo, Lei Huang, Ji Wu <br>
             <strong>arXiv:</strong> 2405.11788 (co-first author)
           </p>
           <div class="paper-links">
@@ -244,14 +289,11 @@
       </div>
     </div>
 
-    <!-- 第四篇论文 -->
     <div class="col-md-6 paper-card">
       <div class="card">
-        <img src="./img/tinyllava.png" class="card-img-top" alt="Paper4 image">
+        <img src="./img/tinyllava.png" class="card-img-top" alt="Paper image 4">
         <div class="card-body">
-          <h5 class="card-title">
-            TinyLLaVA: A Framework of Small-scale Large Multimodal Models
-          </h5>
+          <h5 class="card-title">TinyLLaVA: A Framework of Small-scale Large Multimodal Models</h5>
           <p class="card-text">
             <strong>Authors:</strong> Baichuan Zhou, Ying Hu, <strong>Xi Weng</strong>, Junlong Jia, 
             Jie Luo, Xien Liu, Ji Wu, Lei Huang<br>
@@ -265,16 +307,15 @@
       </div>
     </div>
 
-    <!-- 第五篇论文 -->
     <div class="col-md-6 paper-card">
       <div class="card">
-        <img src="./img/iclr2024_poster.jpg" class="card-img-top" alt="Paper5 image">
+        <img src="./img/iclr2024_poster.jpg" class="card-img-top" alt="Paper image 5">
         <div class="card-body">
           <h5 class="card-title">Modulate Your Spectrum in Self-Supervised Learning</h5>
           <p class="card-text">
             <strong>Authors:</strong> <strong>Xi Weng</strong>, Yunhao Ni, Tengwei Song, Jie Luo, 
             Rao Muhammad Anwer, Salman Khan, Fahad Khan, Lei Huang<br>
-            <strong>Conference:</strong> ICLR, 2024
+            <strong>Conference:</strong> ICLR 2024
           </p>
           <div class="paper-links">
             <a href="https://arxiv.org/abs/2305.16789" target="_blank">[Paper]</a>
@@ -284,10 +325,9 @@
       </div>
     </div>
 
-    <!-- 第六篇论文 -->
     <div class="col-md-6 paper-card">
       <div class="card">
-        <img src="./img/tpami2024.jpg" class="card-img-top" alt="Paper6 image">
+        <img src="./img/tpami2024.jpg" class="card-img-top" alt="Paper image 6">
         <div class="card-body">
           <h5 class="card-title">Understanding Whitening Loss in Self-supervised Learning</h5>
           <p class="card-text">
@@ -303,16 +343,15 @@
       </div>
     </div>
 
-    <!-- 第七篇论文 -->
     <div class="col-md-6 paper-card">
       <div class="card">
-        <img src="./img/nips2022_poster.png" class="card-img-top" alt="Paper7 image">
+        <img src="./img/nips2022_poster.png" class="card-img-top" alt="Paper image 7">
         <div class="card-body">
           <h5 class="card-title">An Investigation into Whitening Loss for Self-supervised Learning</h5>
           <p class="card-text">
             <strong>Authors:</strong> <strong>Xi Weng</strong>, Lei Huang, Lei Zhao, Rao Muhammad Anwer, 
             Salman Khan, Fahad Shahbaz Khan<br>
-            <strong>Conference:</strong> NeurIPS, 2022 <span style="color:#991100;">(Spotlight)</span>
+            <strong>Conference:</strong> NeurIPS 2022 <span style="color:#991100;">(Spotlight)</span>
           </p>
           <div class="paper-links">
             <a href="https://arxiv.org/abs/2210.03586" target="_blank">[Paper]</a>
@@ -321,11 +360,10 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
-<!-- Education -->
+<!-- ====================== Education ====================== -->
 <div class="container info-section" id="edu">
   <h3>Education</h3>
   <ul class="custom-list">
@@ -350,7 +388,7 @@
   </ul>
 </div>
 
-<!-- Awards and Honors -->
+<!-- ====================== Awards and Honors ====================== -->
 <div class="container info-section" id="AH">
   <h3>Awards and Honors</h3>
   <ul class="custom-list">
@@ -361,42 +399,45 @@
   </ul>
 </div>
 
-<!-- Source Code -->
+<!-- ====================== Source Code ====================== -->
 <div class="container info-section" id="CODE">
   <h3>Source Code</h3>
   <ul class="custom-list">
-    <li><a href="https://github.com/winci-ai/resa" target="_blank">ReSA</a>: Official implementation of ReSA 
+    <li>
+      <a href="https://github.com/winci-ai/resa" target="_blank">ReSA</a>: Official implementation 
       (<a href="https://arxiv.org/abs/2501.18452" target="_blank">2501.18452</a>).
     </li>
-    <li><a href="https://github.com/winci-ai/INTL" target="_blank">INTL</a>: Official implementation of INTL 
+    <li>
+      <a href="https://github.com/winci-ai/INTL" target="_blank">INTL</a>: Official implementation 
       (<a href="https://arxiv.org/abs/2305.16789" target="_blank">2305.16789</a>).
     </li>
-    <li><a href="https://github.com/winci-ai/CW-RGP" target="_blank">CW-RGP</a>: Official implementation of CW-RGP 
+    <li>
+      <a href="https://github.com/winci-ai/CW-RGP" target="_blank">CW-RGP</a>: Official implementation 
       (<a href="https://arxiv.org/abs/2210.03586" target="_blank">2210.03586</a>).
     </li>
   </ul>
 </div>
 
-<!-- Miscellaneous -->
+<!-- ====================== Miscellaneous ====================== -->
 <div class="container info-section">
   <h3>Miscellaneous</h3>
   <ul class="custom-list">
-    <li>I also have a great interest in fitness, singing and guitar.</li>
+    <li>I also have great interest in fitness, singing and guitar.</li>
   </ul>
-  <div>
+  <p>
     <strong>Main Co-authors:</strong>
-    [<a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a>] | 
-    [<a href="https://huangleibuaa.github.io/">Lei Huang</a>] | 
+    [<a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a>] |
+    [<a href="https://huangleibuaa.github.io/">Lei Huang</a>] |
     [<a href="https://sites.google.com/view/fahadkhans/home?pli=1">Fahad Shahbaz Khan</a>]
-  </div>
+  </p>
 </div>
 
-<!-- 页脚 -->
+<!-- ====================== 页脚 ====================== -->
 <div class="footer">
   <p>© 2025 Winci. All rights reserved.</p>
 </div>
 
-<!-- 统计脚本，如果需要就保留 -->
+<!-- ====================== 统计脚本（如果需要则保留） ====================== -->
 <script type="text/javascript">
   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
