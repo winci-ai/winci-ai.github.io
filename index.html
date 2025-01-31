@@ -11,6 +11,7 @@
 <title>Welcome to Winci's homepage</title>
 
 
+
 <script>
 // Load this when the DOM is ready
 $(function(){
@@ -24,8 +25,33 @@ $(function(){
 </head>
     
 <body data-gr-c-s-loaded="true"> 
-<p><br/>
-</p>
+<style>
+    @font-face {
+            font-family: "Eras Bold ITC";
+            src: url("fonts/ErasBoldITC.ttf") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+    @font-face {
+            font-family: "Comic Sans MS";
+            src: url("fonts/ComicSansMS.ttf") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Consolas";
+            src: url("fonts/Consolas.ttf") format("truetype");
+            font-weight: lighter;
+            font-style: normal;
+        }
+        
+    body {
+        font-family: "Consolas", sans-serif;
+        }
+
+</style>   
 
 <div id="container">
 
@@ -38,7 +64,7 @@ $(function(){
 		<p> School of Computing, National University of Singapore<br></p>
 		<p> <strong>Email:</strong> xi.w@u.nus.edu<br></p>
 		<p> <strong>Github:</strong> <a href="https://github.com/winci-ai">github.com/winci-ai</a></p>
-		<p><font face="Times New Roman" size="4">  [<a href="#pub">Publication</a>] |[<a href="#edu">Education</a>] | [<a href="#AH">Awards and Honors</a>] | [<a href="#CODE">Source Code</a>] </p>
+		<p><font face="Consolas" size="4">  [<a href="#pub">Publication</a>] |[<a href="#edu">Education</a>] | [<a href="#AH">Awards and Honors</a>] | [<a href="#CODE">Source Code</a>] </p>
 	</div>
 	<div id="pic">
 		<img src="./winci.jpg" width="150">
@@ -139,26 +165,30 @@ $(function(){
 	
 
 <h3>Education<a name="edu"></a></h3>
-<font size="4" face="Times New Roman">
+<font size="4" face="Consolas">
 <ul>
-	<li><font face="Times New Roman">Jan. 2025 - Currently</font>
+	<li><font >Jan. 2025 - Currently</font>
 		<ul>
-		  <li><font face="Times New Roman"><strong>Ph.D. in Computer Science, National University of Singapore </strong></font></li>
-		  <li><font face="Times New Roman"> Advisor: Prof. <a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a></font></li>
+		  <li><font ><strong>Ph.D. in Computer Science, National University of Singapore </strong></font></li>
+		  <li><font > Advisor: Prof. <a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a></font></li>
 		</ul>
 	</li>
 
-  <li><font face="Times New Roman">Sep. 2022 - Dec. 2024</font>
+    <hr>
+
+  <li><font >Sep. 2022 - Dec. 2024</font>
       <ul>
-        <li><font face="Times New Roman"><strong>M.Sc. in Artificial Intelligence, Beihang University </strong></font></li>
-        <li><font face="Times New Roman"> Advisor: Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a></font></li>
+        <li><font ><strong>M.Sc. in Artificial Intelligence, Beihang University </strong></font></li>
+        <li><font > Advisor: Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a></font></li>
       </ul>
   </li>
 
-  <li><font face="Times New Roman">Sep. 2018 - Jun. 2022 </font>
+  <hr>
+
+  <li><font >Sep. 2018 - Jun. 2022 </font>
     <ul>
-		<li><font face="Times New Roman"><strong>B.Eng. in Artificial Intelligence, Beihang University </strong></font></li>
-        <li><font face="Times New Roman"> Advisor: Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a></font></li>
+		<li><font ><strong>B.Eng. in Artificial Intelligence, Beihang University </strong></font></li>
+        <li><font > Advisor: Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a></font></li>
     </ul>
   </li>
 </ul>
@@ -168,10 +198,10 @@ $(function(){
 <h3>Awards and Honors<a name="AH"></a></h3>
 
 <ul>
-	<li><p><font face="Times New Roman"> Excellent Graduation Thesis of Beihang University, 2024.</font></p></li>
-	<li><p><font face="Times New Roman"> Outstanding Graduate of Beihang University, 2024.</font></p></li>
-	<li><p><font face="Times New Roman"> China National Scholarship, 2023.</font></p></li>
-	<li><p><font face="Times New Roman"> Excellent Academic Innovation Achievement Award, 2023.</font></p></li>
+	<li><p><font > Excellent Graduation Thesis of Beihang University, 2024.</font></p></li>
+	<li><p><font > Outstanding Graduate of Beihang University, 2024.</font></p></li>
+	<li><p><font > China National Scholarship, 2023.</font></p></li>
+	<li><p><font > Excellent Academic Innovation Achievement Award, 2023.</font></p></li>
 </ul>
 
 <hr>
@@ -179,9 +209,9 @@ $(function(){
 <h3>Source Code<a name="CODE"></a></h3>
 
 <ul>
-	<li><p><font face="Times New Roman"><a href="https://github.com/winci-ai/resa">ReSA</a>: This project is an official implementation of ReSA. (<a href="https://arxiv.org/abs/2501.18452">2501.18452</a>).</font></p></li>
-	<li><p><font face="Times New Roman"><a href="https://github.com/winci-ai/INTL">INTL</a>: This project is an official implementation of INTL. (<a href="https://arxiv.org/abs/2305.16789">2305.16789</a>).</font></p></li>
-	<li><p><font face="Times New Roman"><a href="https://github.com/winci-ai/CW-RGP">CW-RGP</a>: This project is an official implementation of CW-RGP. (<a href="https://arxiv.org/abs/2210.03586">2210.03586</a>).</font></p></li>
+	<li><p><font ><a href="https://github.com/winci-ai/resa">ReSA</a>: This project is an official implementation of ReSA. (<a href="https://arxiv.org/abs/2501.18452">2501.18452</a>).</font></p></li>
+	<li><p><font ><a href="https://github.com/winci-ai/INTL">INTL</a>: This project is an official implementation of INTL. (<a href="https://arxiv.org/abs/2305.16789">2305.16789</a>).</font></p></li>
+	<li><p><font ><a href="https://github.com/winci-ai/CW-RGP">CW-RGP</a>: This project is an official implementation of CW-RGP. (<a href="https://arxiv.org/abs/2210.03586">2210.03586</a>).</font></p></li>
 </ul>
 
 
@@ -190,7 +220,7 @@ $(function(){
 <h3>Miscellaneous<a name="Ms"></a></h3>
 
 <ul>
-  <li><font face="Times New Roman">I also have great interest in fitness, singing and guitar. </font>
+  <li><font >I also have great interest in fitness, singing and guitar. </font>
   </li>
 </ul>
 
@@ -201,7 +231,7 @@ $(function(){
 </div>
 
 
-<font face="Times New Roman">
+<font >
 </font>
 
 <script type="text/javascript">
