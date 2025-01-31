@@ -1,453 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xi Weng (Winci) - Computer Vision Researcher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
 
-  <!-- 让移动端优先进行自适应 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Winci's homepage</title>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            line-height: 1.6;
+            color: #444;
+        }
 
-  <!-- 引入 Bootstrap -->
-  <link rel="stylesheet" href="./layout/bootstrap.min.css">
-  
-  <!-- 引入 Google Font：Roboto -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet"
-  >
+        .profile-header {
+            background: linear-gradient(135deg, var(--primary-color), #34495e);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+            padding: 2rem;
+        }
 
-  <!-- 这里可以引入你自定义的样式文件。如果没有就使用下面的内联样式示例 -->
-  <!-- <link rel="stylesheet" href="./layout/styles.css"> -->
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border: 4px solid white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
 
-  <script src="./Welcome to Winci&#39;s homepage_files/jquery.min.js"></script>
-  <script src="./layout/bootstrap.min.js"></script>
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+        }
 
-  <meta name="description" content="">
-  <meta name="author" content="Winci">
+        .section-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
 
-  <style>
-    /* ======= 全局样式 ======= */
-    body {
-      font-family: 'Roboto', sans-serif;
-      font-size: 18px;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f5f5f5; /* 柔和的背景色 */
-      margin: 0;
-      padding: 0;
-    }
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
 
-    /* ======= 导航栏样式 ======= */
-    .navbar {
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .navbar-brand {
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: #333 !important;
-    }
-    .nav-link {
-      color: #555 !important;
-      font-weight: 500;
-    }
+        .publication-item {
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
 
-    /* ======= Hero 区 ======= */
-    .hero {
-      /* 可以换成你想要的图片或纯色，也可以用渐变色 */
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #ffffff;
-      padding: 80px 0;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .hero h1 {
-      font-weight: 700;
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 0;
-    }
+        .news-item {
+            background: rgba(255,255,255,0.9);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
 
-    /* ======= info-section，每个版块的外层容器 ======= */
-    .info-section {
-      background: #fff;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-      padding: 30px;
-      margin-bottom: 30px;
-    }
-    .info-section h3 {
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
+        .news-item::before {
+            content: "🆕";
+            position: absolute;
+            left: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-color);
+        }
 
-    /* ======= 自定义列表样式 ======= */
-    .custom-list {
-      list-style-type: disc;
-      margin-left: 1.2rem;
-    }
-    .custom-list li {
-      margin-bottom: 10px;
-    }
+        .icon-list li {
+            display: flex;
+            align-items: center;
+            margin: 0.8rem 0;
+        }
 
-    /* ======= 个人照片 ======= */
-    .profile-pic {
-      max-width: 240px;
-      width: 100%;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      margin-top: 20px;
-    }
+        .icon-list i {
+            margin-right: 1rem;
+            color: var(--secondary-color);
+            width: 1.5rem;
+            text-align: center;
+        }
 
-    /* ======= 新闻的简单高亮 ======= */
-    .news-item {
-      margin-bottom: 10px;
-    }
-    .news-item strong {
-      color: #ff0000;
-    }
+        .paper-thumbnail {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
 
-    /* ======= 论文卡片区域 ======= */
-    .paper-card {
-      margin-bottom: 30px;
-    }
-    .paper-card .card {
-      border: none;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    }
-    .paper-card .card-img-top {
-      /* 让图片更大、更好看一些，如果比例怪异可自己再调 */
-      max-height: 200px;
-      object-fit: cover;
-    }
-    .paper-card .card-body {
-      padding: 20px;
-    }
-    .paper-card .card-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    .paper-card .card-text {
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-    .paper-links a {
-      margin-right: 15px;
-      font-weight: 500;
-      color: #4c62a1;
-    }
-    .paper-links a:hover {
-      text-decoration: underline;
-    }
+        .paper-thumbnail:hover {
+            transform: scale(1.03);
+        }
 
-    /* ======= 底部页脚 ======= */
-    .footer {
-      background: #ffffff;
-      color: #777;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
-      font-size: 0.9rem;
-    }
-  </style>
+        .badge-custom {
+            background: var(--secondary-color);
+            color: white;
+            font-weight: 500;
+        }
 
-  <script>
-    $(function(){
-      // 若有轮播图或其他需要Bootstrap JS的效果，请在此初始化
-      // $('#carousel-example-generic').carousel();
-    });
-  </script>
+        @media (max-width: 768px) {
+            .profile-header {
+                text-align: center;
+            }
+            
+            .profile-img {
+                margin: 0 auto 1rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<!-- ====================== 导航栏 ====================== -->
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">Winci</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarContent" aria-controls="navbarContent" 
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">≡</span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#publication">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="#edu">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#AH">Awards</a></li>
-        <li class="nav-item"><a class="nav-link" href="#CODE">Source Code</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- ====================== Hero 区，顶部介绍 ====================== -->
-<div class="hero">
-  <div class="container">
-    <h1>Welcome to Winci's homepage</h1>
-    <p>PhD student @ School of Computing, National University of Singapore</p>
-    <p>
-      <strong>Email:</strong> xi.w@u.nus.edu &nbsp; | &nbsp;
-      <strong>Github:</strong> <a style="color:#fff; text-decoration: underline;" href="https://github.com/winci-ai">github.com/winci-ai</a>
-    </p>
-  </div>
-</div>
-
-<!-- ====================== 基本信息区 ====================== -->
-<div class="container info-section">
-  <div class="row">
-    <div class="col-md-8">
-      <h3>About Me</h3>
-      <p>
-        My name is <strong>Xi Weng</strong>, and you can call me <strong>Winci</strong>. 
-        I am currently a first-year PhD student at the School of Computing, NUS, under the supervision of 
-        Prof. <a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a>. 
-        Prior to this, I earned both the Bachelor's and Master's degree from the School of Artificial Intelligence 
-        at Beihang University, supervised by Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a>. 
-        My primary research interests lie in self-supervised learning and multimodal pre-training.
-      </p>
-      <ul class="custom-list">
-        <li class="news-item"><strong>NEWS</strong> (June 2024): One paper is accepted by TPAMI.</li>
-        <li class="news-item"><strong>NEWS</strong> (Jan 2024): One paper is accepted by ICLR 2024.</li>
-        <li class="news-item"><strong>NEWS</strong> (Sep 2022): One paper is accepted by NeurIPS 2022 (spotlight).</li>
-      </ul>
-    </div>
-    <div class="col-md-4 text-center">
-      <img src="./winci.jpg" class="profile-pic" alt="Winci's photo">
-    </div>
-  </div>
-</div>
-
-<!-- ====================== Publications ====================== -->
-<div class="container info-section" id="publication">
-  <h3>Publications</h3>
-  <div class="row">
-    <!-- Example: 这里为了更好看，给每篇论文占一半宽度 -->
-    <div class="col-md-6 paper-card">
-      <div class="card">
-        <img src="https://github.com/winci-ai/resa/releases/download/figure/postive-feedback.jpg"
-             class="card-img-top" alt="Paper image 1">
-        <div class="card-body">
-          <h5 class="card-title">Clustering Properties of Self-Supervised Learning</h5>
-          <p class="card-text">
-            <strong>Authors:</strong> <strong>Xi Weng</strong>, Jianing An, Xudong Ma, Binhang Qi, Jie Luo, Xi Yang, 
-            Jin Song Dong, Lei Huang<br>
-            <strong>arXiv:</strong> 2501.18452
-          </p>
-          <div class="paper-links">
-            <a href="https://arxiv.org/abs/2501.18452" target="_blank">[Paper]</a>
-            <a href="https://github.com/winci-ai/resa" target="_blank">[Code]</a>
-          </div>
+    <div class="container py-4">
+        <!-- Header Section -->
+        <div class="profile-header">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center">
+                    <img src="./winci.jpg" class="profile-img rounded-circle" alt="Xi Weng">
+                </div>
+                <div class="col-md-9">
+                    <h1 class="display-4 mb-3">Xi Weng (Winci)</h1>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="badge badge-custom">Self-Supervised Learning</span>
+                        <span class="badge badge-custom">Multimodal Pre-training</span>
+                        <span class="badge badge-custom">Computer Vision</span>
+                    </div>
+                    <p class="lead mb-1"><i class="fas fa-map-marker-alt"></i> National University of Singapore</p>
+                    <p class="mb-1"><i class="fas fa-envelope"></i> xi.w@u.nus.edu</p>
+                    <p class="mb-0"><i class="fab fa-github"></i> <a href="https://github.com/winci-ai" class="text-white">github.com/winci-ai</a></p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="col-md-6 paper-card">
-      <div class="card">
-        <img src="./img/tinyllava_vedio.jpg" class="card-img-top" alt="Paper image 2">
-        <div class="card-body">
-          <h5 class="card-title">
-            TinyLLaVA-Video: A Simple Framework of Small-scale Large Multimodal Models for Video Understanding
-          </h5>
-          <p class="card-text">
-            <strong>Authors:</strong> Xingjian Zhang, <strong>Xi Weng</strong>, Yihao Yue, 
-            Zhaoxin Fan, Wenjun Wu, Lei Huang<br>
-            <strong>arXiv:</strong> 2501.15513
-          </p>
-          <div class="paper-links">
-            <a href="https://arxiv.org/abs/2501.15513" target="_blank">[Paper]</a>
-            <a href="https://github.com/ZhangXJ199/TinyLLaVA-Video" target="_blank">[Code]</a>
-          </div>
+        <!-- News Section -->
+        <div class="section-card mt-4">
+            <h2 class="mb-4"><i class="fas fa-bullhorn me-2"></i>Latest News</h2>
+            <div class="news-item">June 2024: One paper accepted by TPAMI</div>
+            <div class="news-item">January 2024: One paper accepted by ICLR 2024</div>
+            <div class="news-item">September 2022: Spotlight paper at NeurIPS 2022</div>
         </div>
-      </div>
-    </div>
 
-    <div class="col-md-6 paper-card">
-      <div class="card">
-        <img src="./img/tinyllava_factory.png" class="card-img-top" alt="Paper image 3">
-        <div class="card-body">
-          <h5 class="card-title">
-            TinyLLaVA Factory: A Modularized Codebase for Small-scale Large Multimodal Models
-          </h5>
-          <p class="card-text">
-            <strong>Authors:</strong> Junlong Jia, Ying Hu, <strong>Xi Weng</strong>, Yiming Shi, Miao Li, 
-            Xingjian Zhang, Baichuan Zhou, Ziyu Liu, Jie Luo, Lei Huang, Ji Wu <br>
-            <strong>arXiv:</strong> 2405.11788 (co-first author)
-          </p>
-          <div class="paper-links">
-            <a href="https://arxiv.org/pdf/2405.11788" target="_blank">[Paper]</a>
-            <a href="https://github.com/TinyLLaVA/TinyLLaVA_Factory" target="_blank">[Code, 700+stars]</a>
-          </div>
+        <!-- Publications Section -->
+        <div class="section-card">
+            <h2 class="mb-4"><i class="fas fa-file-alt me-2"></i>Selected Publications</h2>
+            <div class="row">
+                <!-- Publication Item 1 -->
+                <div class="col-md-6 mb-4">
+                    <div class="publication-item">
+                        <img src="https://github.com/winci-ai/resa/releases/download/figure/postive-feedback.jpg" 
+                             class="paper-thumbnail" alt="Clustering Properties">
+                        <h5>Clustering Properties of Self-Supervised Learning</h5>
+                        <div class="text-muted small mb-2">arXiv:2501.18452</div>
+                        <div class="d-flex gap-2">
+                            <a href="https://arxiv.org/abs/2501.18452" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-file-pdf"></i> Paper
+                            </a>
+                            <a href="https://github.com/winci-ai/resa" class="btn btn-sm btn-outline-success">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add other publications following the same pattern -->
+
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="col-md-6 paper-card">
-      <div class="card">
-        <img src="./img/tinyllava.png" class="card-img-top" alt="Paper image 4">
-        <div class="card-body">
-          <h5 class="card-title">TinyLLaVA: A Framework of Small-scale Large Multimodal Models</h5>
-          <p class="card-text">
-            <strong>Authors:</strong> Baichuan Zhou, Ying Hu, <strong>Xi Weng</strong>, Junlong Jia, 
-            Jie Luo, Xien Liu, Ji Wu, Lei Huang<br>
-            <strong>arXiv:</strong> 2402.14289
-          </p>
-          <div class="paper-links">
-            <a href="https://arxiv.org/abs/2402.14289" target="_blank">[Paper]</a>
-            <a href="https://github.com/DLCV-BUAA/TinyLLaVABench" target="_blank">[Code]</a>
-          </div>
+        <!-- Education Section -->
+        <div class="section-card">
+            <h2 class="mb-4"><i class="fas fa-graduation-cap me-2"></i>Education</h2>
+            <ul class="icon-list list-unstyled">
+                <li>
+                    <i class="fas fa-angle-right"></i>
+                    <div>
+                        <h5 class="mb-1">Ph.D. in Computer Science</h5>
+                        <p class="mb-0 text-muted">National University of Singapore (2025-Present)</p>
+                    </div>
+                </li>
+                <!-- Add other education items -->
+            </ul>
         </div>
-      </div>
-    </div>
 
-    <div class="col-md-6 paper-card">
-      <div class="card">
-        <img src="./img/iclr2024_poster.jpg" class="card-img-top" alt="Paper image 5">
-        <div class="card-body">
-          <h5 class="card-title">Modulate Your Spectrum in Self-Supervised Learning</h5>
-          <p class="card-text">
-            <strong>Authors:</strong> <strong>Xi Weng</strong>, Yunhao Ni, Tengwei Song, Jie Luo, 
-            Rao Muhammad Anwer, Salman Khan, Fahad Khan, Lei Huang<br>
-            <strong>Conference:</strong> ICLR 2024
-          </p>
-          <div class="paper-links">
-            <a href="https://arxiv.org/abs/2305.16789" target="_blank">[Paper]</a>
-            <a href="https://github.com/winci-ai/INTL" target="_blank">[Code]</a>
-          </div>
+        <!-- Awards Section -->
+        <div class="section-card">
+            <h2 class="mb-4"><i class="fas fa-award me-2"></i>Awards & Honors</h2>
+            <ul class="icon-list list-unstyled">
+                <li>
+                    <i class="fas fa-trophy"></i>
+                    China National Scholarship (2023)
+                </li>
+                <!-- Add other awards -->
+            </ul>
         </div>
-      </div>
     </div>
 
-    <div class="col-md-6 paper-card">
-      <div class="card">
-        <img src="./img/tpami2024.jpg" class="card-img-top" alt="Paper image 6">
-        <div class="card-body">
-          <h5 class="card-title">Understanding Whitening Loss in Self-supervised Learning</h5>
-          <p class="card-text">
-            <strong>Authors:</strong> Lei Huang, Yunhao Ni, <strong>Xi Weng</strong>, 
-            Rao Muhammad Anwer, Salman Khan, Ming-Hsuan Yang, Fahad Shahbaz Khan<br>
-            <strong>Journal:</strong> TPAMI, 2024
-          </p>
-          <div class="paper-links">
-            <a href="https://www.computer.org/csdl/journal/tp/5555/01/10568417/1XXinr7o9IA" target="_blank">[Paper]</a>
-            <a href="https://github.com/winci-ai/CW-RGP" target="_blank">[Code]</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 paper-card">
-      <div class="card">
-        <img src="./img/nips2022_poster.png" class="card-img-top" alt="Paper image 7">
-        <div class="card-body">
-          <h5 class="card-title">An Investigation into Whitening Loss for Self-supervised Learning</h5>
-          <p class="card-text">
-            <strong>Authors:</strong> <strong>Xi Weng</strong>, Lei Huang, Lei Zhao, Rao Muhammad Anwer, 
-            Salman Khan, Fahad Shahbaz Khan<br>
-            <strong>Conference:</strong> NeurIPS 2022 <span style="color:#991100;">(Spotlight)</span>
-          </p>
-          <div class="paper-links">
-            <a href="https://arxiv.org/abs/2210.03586" target="_blank">[Paper]</a>
-            <a href="https://github.com/winci-ai/CW-RGP" target="_blank">[Code]</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ====================== Education ====================== -->
-<div class="container info-section" id="edu">
-  <h3>Education</h3>
-  <ul class="custom-list">
-    <li><strong>Jan. 2025 - Present</strong>
-      <ul>
-        <li>PhD student in School of Computing, National University of Singapore</li>
-        <li>Advisor: Prof. <a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a></li>
-      </ul>
-    </li>
-    <li><strong>Sep. 2022 - Dec. 2024</strong>
-      <ul>
-        <li>Master student in School of Artificial Intelligence, Beihang University</li>
-        <li>Advisor: Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a></li>
-      </ul>
-    </li>
-    <li><strong>Sep. 2018 - Jun. 2022</strong>
-      <ul>
-        <li>Undergraduate in School of Artificial Intelligence, Beihang University</li>
-        <li>Advisor: Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a></li>
-      </ul>
-    </li>
-  </ul>
-</div>
-
-<!-- ====================== Awards and Honors ====================== -->
-<div class="container info-section" id="AH">
-  <h3>Awards and Honors</h3>
-  <ul class="custom-list">
-    <li>Excellent Graduation Thesis of Beihang University, 2024.</li>
-    <li>Outstanding Graduate of Beihang University, 2024.</li>
-    <li>China National Scholarship, 2023.</li>
-    <li>Excellent Academic Innovation Achievement Award, 2023.</li>
-  </ul>
-</div>
-
-<!-- ====================== Source Code ====================== -->
-<div class="container info-section" id="CODE">
-  <h3>Source Code</h3>
-  <ul class="custom-list">
-    <li>
-      <a href="https://github.com/winci-ai/resa" target="_blank">ReSA</a>: Official implementation 
-      (<a href="https://arxiv.org/abs/2501.18452" target="_blank">2501.18452</a>).
-    </li>
-    <li>
-      <a href="https://github.com/winci-ai/INTL" target="_blank">INTL</a>: Official implementation 
-      (<a href="https://arxiv.org/abs/2305.16789" target="_blank">2305.16789</a>).
-    </li>
-    <li>
-      <a href="https://github.com/winci-ai/CW-RGP" target="_blank">CW-RGP</a>: Official implementation 
-      (<a href="https://arxiv.org/abs/2210.03586" target="_blank">2210.03586</a>).
-    </li>
-  </ul>
-</div>
-
-<!-- ====================== Miscellaneous ====================== -->
-<div class="container info-section">
-  <h3>Miscellaneous</h3>
-  <ul class="custom-list">
-    <li>I also have great interest in fitness, singing and guitar.</li>
-  </ul>
-  <p>
-    <strong>Main Co-authors:</strong>
-    [<a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a>] |
-    [<a href="https://huangleibuaa.github.io/">Lei Huang</a>] |
-    [<a href="https://sites.google.com/view/fahadkhans/home?pli=1">Fahad Shahbaz Khan</a>]
-  </p>
-</div>
-
-<!-- ====================== 页脚 ====================== -->
-<div class="footer">
-  <p>© 2025 Winci. All rights reserved.</p>
-</div>
-
-<!-- ====================== 统计脚本（如果需要则保留） ====================== -->
-<script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-  try {
-    var pageTracker = _gat._getTracker("UA-1577297-3");
-    pageTracker._trackPageview();
-  } catch(err) {}
-</script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
