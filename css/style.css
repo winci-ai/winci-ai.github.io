@@ -148,6 +148,23 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .topnav-links a:hover,
 .topnav-links a.is-active { color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.topnav-links { margin-left: auto; min-width: 0; }
+
+.nav-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  transition: filter .15s;
+}
+.nav-cv .ico { width: 15px; height: 15px; }
+.nav-cv:hover { filter: brightness(1.08); text-decoration: none; }
 
 /* ===== Page layout ===== */
 .layout {
@@ -276,7 +293,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .location .ico { width: 14px; height: 14px; }
 
-.social { display: flex; justify-content: center; gap: 8px; margin: 18px 0 0; }
+.social { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 18px 0 0; }
 
 .social-btn {
   display: inline-flex;
@@ -300,6 +317,39 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   background: var(--accent-soft);
   text-decoration: none;
 }
+
+/* CV buttons */
+.cv-actions { display: flex; gap: 8px; margin-top: 12px; }
+.cv-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 28%, transparent);
+  transition: transform .15s, box-shadow .15s, filter .15s;
+}
+.cv-btn .ico { width: 17px; height: 17px; }
+.cv-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--accent) 35%, transparent);
+  filter: brightness(1.05);
+  text-decoration: none;
+}
+.cv-btn-ghost {
+  flex: 0 0 44px;
+  padding: 10px 0;
+  color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: none;
+}
+.cv-btn-ghost:hover { box-shadow: none; filter: none; background: color-mix(in srgb, var(--accent) 16%, var(--card)); }
 
 .stats {
   display: grid;
@@ -681,7 +731,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   }
   .profile-info { padding: 22px 24px; }
   .affil { justify-content: flex-start; }
-  .social { justify-content: flex-start; }
+  .social, .cv-actions { max-width: 260px; }
   .stats { max-width: 360px; }
   .stat + .stat { padding-left: 14px; }
   .emails { display: none; }
@@ -693,6 +743,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .brand { font-size: 0; gap: 0; }       /* keep only the monogram */
   .monogram { font-size: .9rem; }
   .topnav-links a { padding: 6px 9px; font-size: .85rem; }
+  .nav-cv { padding: 6px 10px; }
 
   .layout { padding: 16px 16px 0; gap: 16px; }
   .content { gap: 16px; }
@@ -705,7 +756,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .avatar-wrap { padding: 24px 0 0; background-size: 100% 90px; display: block; }
   .avatar { width: 124px; height: 124px; }
   .profile-info { padding: 12px 18px 22px; }
-  .affil, .social { justify-content: center; }
+  .affil { justify-content: center; }
+  .social, .cv-actions { max-width: 280px; margin-left: auto; margin-right: auto; }
   .stats { max-width: none; }
   .stat + .stat { padding-left: 0; }
 
