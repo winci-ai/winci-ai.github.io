@@ -247,7 +247,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   width: 148px;
   height: 148px;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center;
   border-radius: 50%;
   border: 5px solid var(--card);
   box-shadow: var(--shadow);
