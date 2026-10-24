@@ -1,295 +1,313 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html class="winci"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-	<meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="Winci">
-    <script src="./layout/jquery.min.js"></script>
-    <link rel="stylesheet" href="./layout/bootstrap.min.css"><!--http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/-->
-    <script src="./layout/bootstrap.min.js"></script>
-    <link href="./layout/styles.css" rel="stylesheet">
-    <link rel="icon" type="image/jpg" href="img/nus.jpg">
-<title>Winci @ NUS - Homepage</title>
-
-
-
-<script>
-// Load this when the DOM is ready
-$(function(){
-  // You used .myCarousel here. 
-  // That's the class selector not the id selector,
-  // which is #myCarousel
-  $('#carousel-example-generic').carousel();
-});
-</script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Xi Weng (Winci) — PhD student at the National University of Singapore, working on self-supervised visual representation learning, multimodal learning and world models.">
+  <meta name="author" content="Xi Weng">
+  <title>Xi Weng (Winci) · NUS</title>
+  <link rel="icon" type="image/jpeg" href="img/nus.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-    
-<body data-gr-c-s-loaded="true"> 
-<style>
-    @font-face {
-            font-family: "Eras Bold ITC";
-            src: url("fonts/ErasBoldITC.ttf") format("truetype");
-            font-weight: bold;
-            font-style: normal;
-        }
 
-    @font-face {
-            font-family: "Comic Sans MS";
-            src: url("fonts/ComicSansMS.ttf") format("truetype");
-            font-weight: bold;
-            font-style: normal;
-        }
+<body>
 
-        @font-face {
-            font-family: "Consolas";
-            src: url("fonts/Consolas.ttf") format("truetype");
-            font-weight: lighter;
-            font-style: normal;
-        }
-        
-    body {
-        font-family: "Consolas", sans-serif;
-        }
-
-</style>   
-
-<div id="container">
-
-
-<div id="main">
-
-	<div id="department">
-
-		<h1>Xi Weng  <img src="img/nus_icon.jpg" alt="icon" style="width: 50px; height: 60px; vertical-align: middle;"></h1> 
-		<p class="note">PhD student</p>
-		<p> School of Computing, National University of Singapore <br></p>
-    <p> <strong>Email:</strong> xi.w@u.nus.edu, xi.winci@gmail.com<br></p>
-    <p>
-      <a href="mailto:xi.w@u.nus.edu"><img src="img/email_logo.jpg" alt="icon" style="width: 40px; height: 40px; vertical-align: middle;"></a>&nbsp;&nbsp;
-      <a href="https://github.com/winci-ai"><img src="img/github_logo.jpg" alt="icon" style="width: 40px; height: 40px; vertical-align: middle;"></a>&nbsp;&nbsp;
-      <a href="https://scholar.google.com.hk/citations?user=kT4c594AAAAJ"><img src="img/google_scholar_logo.jpg" alt="icon" style="width: 40px; height: 40px; vertical-align: middle;"></a>&nbsp;&nbsp;
-    </p>
-		<p><font face="Consolas" size="4">  [<a href="#pub">Publication</a>] |[<a href="#edu">Education</a>] | [<a href="#AH">Awards and Honors</a>] | [<a href="#CODE">Source Code</a>] | [<a href="#Service">Academic Service</a>] </p>
-	</div>
-	<div id="pic">
-		<img src="./winci.jpg" width="150">
-	</div>
-</div>
-
-
-<div id ="bio">
-	
-	My name is Xi Weng, and you can call me easily by <b>Winci</b>. I am currently a second-year PhD student at computer science of NUS, under the supervision of Prof. <a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a>. Prior to this, I earned both the Bachelor's and Master's degree from the School of Artificial Intelligence at Beihang University, where I was supervised by Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a>. My primary research interests lie in visual representation (self-supervised) learning, multimodal learning and world models.
-
-<div id="news">
-  <li><font color="red"><strong>NEWS</strong></font> Sep 2026: One paper is accepted by NeurIPS 2026. </li>
-  <li><font color="red"><strong>NEWS</strong></font> May 2025: One paper is accepted by ICML 2025. </li>
-  <li><font color="red"><strong>NEWS</strong></font> June 2024: One paper is accepted by TPAMI. </li>
-  <li><font color="red"><strong>NEWS</strong></font> Jan 2024: One paper is accepted by ICLR 2024. </li>
-  <li><font color="red"><strong>NEWS</strong></font> Sep 2022: One paper is accepted by NeurIPS 2022 (spotlight). </li>         
-</div>
-
-<h3>Internships<a name="internship"></a></h3>
-<ul>
-  <li>
-    <strong>Tencent LIGHTSPEED STUDIOS</strong><br>
-    World Models Research Intern, Qingyun Program<br>
-    Nov. 2026 – 
-  </li>
-</ul>
-
-
-<h3>Publications<a name="publication"></a></h3>
-<hr>
-<h4><strong>Visual Representation (Self-Supervised) Learning:</strong></h4>
-How can we learn rich, general-purpose visual representations for VLMs and WMs? This question has been central to my master’s and PhD research. My work focuses on <strong>joint-embedding architectures</strong> —— a paradigm strongly advocated by Prof. Yann LeCun —— with particular interest in the DINO family of models and JEPA.
-
-<hr>
-<div class="paper">
-	<div class="pimg"><img src="./img/heatmap.jpg" width="130" height="100"></div>
-  <div class="ptitle">The Locality Trade-off in Masked Patch Self-Distillation </div>
-  <div class="pauthors"><strong>Xi Weng</strong>, Zhaoyu Liu, Lianyu Hu, Jin Song Dong</div>
-  <div class="pvenue">Advances in Neural Information Processing Systems (NeurIPS), 2026</div>
-	<div class="plinks">
-  <div class="plink"><a href="">[Paper]</a></div>
-  <div class="plink"><a href="https://github.com/winci-ai/jea">[Code]</a></div>
-  </div>
-</div> 
-
-<div class="paper">
-	<div class="pimg"><img src="https://github.com/winci-ai/resa/releases/download/figure/postive-feedback.jpg" width="130" height="100"></div>
-  <div class="ptitle">Clustering Properties of Self-Supervised Learning </div>
-  <div class="pauthors"><strong>Xi Weng</strong>, Jianing An, Xudong Ma, Binhang Qi, Jie Luo, Xi Yang, Jin Song Dong, Lei Huang</div>
-  <div class="pvenue">International Conference on Machine Learning (ICML), 2025</div>
-	<div class="plinks">
-  <div class="plink"><a href="https://arxiv.org/abs/2501.18452">[Paper]</a></div>
-  <div class="plink"><a href="https://github.com/winci-ai/resa">[Code]</a></div>
-  </div>
-</div> 
-
-
-<div class="paper">
-    <div class="pimg"><img src="./img/iclr2024_poster.jpg" width="130" height="120"></div>
-	<div class="ptitle">Modulate Your Spectrum in Self-Supervised Learning </div>
-	<div class="pauthors"><strong>Xi Weng</strong>, Yunhao Ni, Tengwei Song, Jie Luo, Rao Muhammad Anwer, Salman Khan, Fahad Khan, Lei Huang</div>
-	<div class="pvenue">International Conference on Learning Representations (ICLR), 2024</div>
-    <div class="plinks">
-	<div class="plink"><a href="https://arxiv.org/abs/2305.16789">[Paper]</a></div>
-	<div class="plink"><a href="https://github.com/winci-ai/INTL">[Code]</a></div>
-	</div>
-</div> 
-
-<div class="paper">
-	<div class="pimg"><img src="./img/tpami2024.jpg" width="130" height="100"></div>
-    <div class="ptitle">Understanding Whitening Loss in Self-supervised Learning </div>
-    <div class="pauthors">Lei Huang, Yunhao Ni, <strong>Xi Weng</strong>, Rao Muhammad Anwer, Salman Khan, Ming-Hsuan Yang, Fahad Shahbaz Khan</div>
-    <div class="pvenue">Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2024</div>
-	<div class="plinks">
-	<div class="plink"><a href="https://www.computer.org/csdl/journal/tp/5555/01/10568417/1XXinr7o9IA">[Paper]</a></div>
-	<div class="plink"><a href="https://github.com/winci-ai/CW-RGP">[Code]</a></div>
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a class="brand" href="#top">Winci</a>
+    <div class="topnav-links">
+      <a href="#news">News</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#honors">Honors</a>
+      <a href="#service">Service</a>
     </div>
-</div> 
-
-<div class="paper">
-    <div class="pimg"><img src="./img/nips2022_poster.png" width="130" height="120"></div>
-	<div class="ptitle">An Investigation into Whitening Loss for Self-supervised Learning </div>
-	<div class="pauthors"><strong>Xi Weng</strong>, Lei Huang, Lei Zhao, Rao Muhammad Anwer, Salman Khan, Fahad Shahbaz Khan</div>
-	<div class="pvenue">Advances in Neural Information Processing Systems (NeurIPS), 2022 <font color="#991100"><b>(Spotlight)</b></font></div>
-    <div class="plinks">
-	<div class="plink"><a href="https://arxiv.org/abs/2210.03586">[Paper]</a></div>
-	<div class="plink"><a href="https://github.com/winci-ai/CW-RGP">[Code]</a></div>
-	</div>
-</div> 
-
-<hr>
-<h4><strong>Multimodal Models:</strong></h4>
-<hr>
-<div class="paper">
-	<div class="pimg"><img src="./img/tennis_expert.png" width="130" height="120"></div>
-  <div class="ptitle">TennisExpert: Towards Expert-Level Analytical Sports Video Understanding</div>
-  <div class="pauthors">Zhaoyu Liu, <strong>Xi Weng</strong>, Lianyu Hu, Zhe Hou, Kan Jiang, Jin Song Dong, Yang Liu</div>
-  <div class="pvenue">arXiv:2603.13397</div>
-	<div class="plinks">
-  <div class="plink"><a href="https://arxiv.org/abs/2603.13397">[Paper]</a></div>
-  <div class="plink"><a href="https://github.com/LZYAndy/TennisExpert">[Code]</a></div>
   </div>
-</div> 
+</nav>
 
-<div class="paper">
-	<div class="pimg"><img src="./img/tinyllava_vedio.jpg" width="130" height="120"></div>
-  <div class="ptitle">TinyLLaVA-Video: Towards Smaller LMMs for Video Understanding with Group Resampler</div>
-  <div class="pauthors">Xingjian Zhang, <strong>Xi Weng</strong>, Yihao Yue, Zhaoxin Fan, Wenjun Wu, Lei Huang</div>
-  <div class="pvenue">IEEE International Conference on Multimedia and Expo (ICME), 2026</div>
-	<div class="plinks">
-  <div class="plink"><a href="https://arxiv.org/abs/2501.15513">[Paper]</a></div>
-  <div class="plink"><a href="https://github.com/ZhangXJ199/TinyLLaVA-Video">[Code]</a></div>
-  </div>
-</div> 
+<main class="container" id="top">
 
-<div class="paper">
-	<div class="pimg"><img src="./img/tinyllava_factory.png" width="130" height="120"></div>
-  <div class="ptitle">TinyLLaVA Factory: A Modularized Codebase for Small-scale Large Multimodal Models </div>
-  <div class="pauthors">Junlong Jia, Ying Hu, <strong>Xi Weng</strong>, Yiming Shi, Miao Li, Xingjian Zhang, Baichuan Zhou, Ziyu 
-   Liu, Jie Luo, Lei Huang, Ji Wu</div>
-  <div class="pvenue">arXiv:2405.11788</div> (co-first author)
-	<div class="plinks">
-  <div class="plink"><a href="https://arxiv.org/pdf/2405.11788">[Paper]</a></div>
-  <div class="plink"><a href="https://github.com/TinyLLaVA/TinyLLaVA_Factory">[Code, 900+stars]</a></div>
-  </div>
-</div> 
+  <!-- ===== Profile ===== -->
+  <header class="profile">
+    <img class="avatar" src="img/avatar.webp" width="480" height="559" alt="Photo of Xi Weng">
+    <div class="profile-info">
+      <h1>Xi Weng <span class="aka">Winci</span></h1>
+      <p class="role">PhD Student · School of Computing</p>
+      <p class="affil">
+        <img class="nus-logo" src="img/nus_logo.webp" width="160" height="215" alt="NUS logo">
+        National University of Singapore
+      </p>
+      <p class="emails">xi.w@u.nus.edu &nbsp;·&nbsp; xi.winci@gmail.com</p>
+      <div class="social">
+        <a class="btn" href="mailto:xi.w@u.nus.edu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg>
+          Email
+        </a>
+        <a class="btn" href="https://github.com/winci-ai">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a class="btn" href="https://scholar.google.com/citations?user=kT4c594AAAAJ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 1 9.5l11 6.5 9-5.32V17h2V9.5L12 3zm-7 10.6V17c0 1.93 3.13 3.5 7 3.5s7-1.57 7-3.5v-3.4l-7 4.14-7-4.14z"/></svg>
+          Google Scholar
+        </a>
+      </div>
+    </div>
+  </header>
 
-<div class="paper">
-	<div class="pimg"><img src="./img/tinyllava.png" width="130" height="100"></div>
-  <div class="ptitle">TinyLLaVA: A Framework of Small-scale Large Multimodal Models </div>
-  <div class="pauthors">Baichuan Zhou, Ying Hu, <strong>Xi Weng</strong>, Junlong Jia, Jie Luo, Xien Liu, Ji Wu, Lei Huang</div>
-  <div class="pvenue">arXiv:2402.14289</div> 
-	<div class="plinks">
-  <div class="plink"><a href="https://arxiv.org/abs/2402.14289">[Paper]</a></div>
-  <div class="plink"><a href="https://github.com/DLCV-BUAA/TinyLLaVABench">[Code]</a></div>
-  </div>
-</div> 
-	
+  <!-- ===== About ===== -->
+  <section id="about">
+    <p>
+      I am a second-year PhD student in Computer Science at the National University of Singapore,
+      advised by Prof. <a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a>. I also go by <strong>Winci</strong>.
+      Before that, I received both my Bachelor's and Master's degrees from the School of Artificial Intelligence
+      at Beihang University, advised by Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a>.
+    </p>
+    <p class="interests">
+      <span class="label">Research interests</span>
+      <span class="tag">Visual representation learning</span>
+      <span class="tag">Self-supervised learning</span>
+      <span class="tag">Multimodal learning</span>
+      <span class="tag">World models</span>
+    </p>
+  </section>
 
-<h3>Education<a name="edu"></a></h3>
-<font size="4" face="Consolas">
-<ul>
-	<li><font >Jan. 2025 - Currently</font>
-		<ul>
-		  <li><font ><strong>Ph.D. in Computer Science, National University of Singapore </strong></font></li>
-		  <li><font > Advisor: Prof. <a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a></font></li>
-		</ul>
-	</li>
-
-    <hr>
-
-  <li><font >Sep. 2022 - Dec. 2024</font>
-      <ul>
-        <li><font ><strong>M.Sc. in Artificial Intelligence, Beihang University </strong></font></li>
-        <li><font > Advisor: Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a></font></li>
-      </ul>
-  </li>
-
-  <hr>
-
-  <li><font >Sep. 2018 - Jun. 2022 </font>
-    <ul>
-		<li><font ><strong>B.Eng. in Artificial Intelligence, Beihang University </strong></font></li>
-        <li><font > Advisor: Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a></font></li>
+  <!-- ===== News ===== -->
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time>Sep 2026</time><span>One paper accepted to <strong>NeurIPS 2026</strong>. <span class="badge badge-hot">New</span></span></li>
+      <li><time>May 2025</time><span>One paper accepted to <strong>ICML 2025</strong>.</span></li>
+      <li><time>Jun 2024</time><span>One paper accepted to <strong>TPAMI</strong>.</span></li>
+      <li><time>Jan 2024</time><span>One paper accepted to <strong>ICLR 2024</strong>.</span></li>
+      <li><time>Sep 2022</time><span>One paper accepted to <strong>NeurIPS 2022</strong> as a Spotlight.</span></li>
     </ul>
-  </li>
-</ul>
+  </section>
 
-<hr>
+  <!-- ===== Experience ===== -->
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <ul class="timeline">
+      <li>
+        <time>Nov 2026 - present</time>
+        <div>
+          <div class="tl-title">Tencent LIGHTSPEED STUDIOS</div>
+          <div class="tl-sub">World Models Research Intern · Qingyun Program</div>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-<h3>Awards and Honors<a name="AH"></a></h3>
+  <!-- ===== Publications ===== -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <p class="muted small">* Equal contribution</p>
 
-<ul>
-	<li><p><font > Excellent Graduation Thesis of Beihang University, 2024.</font></p></li>
-	<li><p><font > Outstanding Graduate of Beihang University, 2024.</font></p></li>
-	<li><p><font > China National Scholarship, 2023.</font></p></li>
-	<li><p><font > Excellent Academic Innovation Achievement Award, 2023.</font></p></li>
-</ul>
+    <h3>Visual Representation (Self-Supervised) Learning</h3>
+    <p class="section-intro">
+      How can we learn rich, general-purpose visual representations for VLMs and world models?
+      This question has been central to my Master's and PhD research. My work focuses on
+      <strong>joint-embedding architectures</strong>, a paradigm strongly advocated by Prof. Yann LeCun,
+      with particular interest in the DINO family of models and JEPA.
+    </p>
 
-<hr>
+    <article class="paper">
+      <div class="pimg"><img src="img/jea_neurips2026.webp" width="480" height="251" loading="lazy" alt="Attention heatmaps from masked patch self-distillation"></div>
+      <div class="pbody">
+        <span class="venue">NeurIPS 2026</span>
+        <div class="ptitle">The Locality Trade-off in Masked Patch Self-Distillation</div>
+        <div class="pauthors"><b>Xi Weng</b>, Zhaoyu Liu, Lianyu Hu, Jin Song Dong</div>
+        <div class="pvenue">Advances in Neural Information Processing Systems (NeurIPS), 2026</div>
+        <div class="plinks">
+          <!-- TODO: add the paper link once it is public -->
+          <a href="https://github.com/winci-ai/jea">Code</a>
+        </div>
+      </div>
+    </article>
 
-<h3>Academic Service<a name="Service"></a></h3>
+    <article class="paper">
+      <div class="pimg"><img src="img/resa_icml2025.webp" width="480" height="389" loading="lazy" alt="Positive-feedback loop in self-supervised learning"></div>
+      <div class="pbody">
+        <span class="venue">ICML 2025</span>
+        <div class="ptitle">Clustering Properties of Self-Supervised Learning</div>
+        <div class="pauthors"><b>Xi Weng</b>, Jianing An, Xudong Ma, Binhang Qi, Jie Luo, Xi Yang, Jin Song Dong, Lei Huang</div>
+        <div class="pvenue">International Conference on Machine Learning (ICML), 2025</div>
+        <div class="plinks">
+          <a href="https://arxiv.org/abs/2501.18452">Paper</a>
+          <a href="https://github.com/winci-ai/resa">Code</a>
+        </div>
+      </div>
+    </article>
 
-<ul>
-	<li><p><font > I have served as a reviewer for ICLR, ICML, and NeurIPS (2025, 2026), ECCV 2026.</font></p></li>
-</ul>
+    <article class="paper">
+      <div class="pimg"><img src="img/intl_iclr2024.webp" width="480" height="240" loading="lazy" alt="ICLR 2024 poster"></div>
+      <div class="pbody">
+        <span class="venue">ICLR 2024</span>
+        <div class="ptitle">Modulate Your Spectrum in Self-Supervised Learning</div>
+        <div class="pauthors"><b>Xi Weng</b>, Yunhao Ni, Tengwei Song, Jie Luo, Rao Muhammad Anwer, Salman Khan, Fahad Khan, Lei Huang</div>
+        <div class="pvenue">International Conference on Learning Representations (ICLR), 2024</div>
+        <div class="plinks">
+          <a href="https://arxiv.org/abs/2305.16789">Paper</a>
+          <a href="https://github.com/winci-ai/INTL">Code</a>
+        </div>
+      </div>
+    </article>
 
+    <article class="paper">
+      <div class="pimg"><img src="img/cwrgp_tpami2024.webp" width="480" height="316" loading="lazy" alt="TPAMI cover"></div>
+      <div class="pbody">
+        <span class="venue">TPAMI 2024</span>
+        <div class="ptitle">Understanding Whitening Loss in Self-supervised Learning</div>
+        <div class="pauthors">Lei Huang, Yunhao Ni, <b>Xi Weng</b>, Rao Muhammad Anwer, Salman Khan, Ming-Hsuan Yang, Fahad Shahbaz Khan</div>
+        <div class="pvenue">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2024</div>
+        <div class="plinks">
+          <a href="https://www.computer.org/csdl/journal/tp/5555/01/10568417/1XXinr7o9IA">Paper</a>
+          <a href="https://github.com/winci-ai/CW-RGP">Code</a>
+        </div>
+      </div>
+    </article>
 
-<hr>
+    <article class="paper">
+      <div class="pimg"><img src="img/cwrgp_neurips2022.webp" width="480" height="240" loading="lazy" alt="NeurIPS 2022 poster"></div>
+      <div class="pbody">
+        <span class="venue">NeurIPS 2022</span><span class="badge badge-hot">Spotlight</span>
+        <div class="ptitle">An Investigation into Whitening Loss for Self-supervised Learning</div>
+        <div class="pauthors"><b>Xi Weng</b>, Lei Huang, Lei Zhao, Rao Muhammad Anwer, Salman Khan, Fahad Shahbaz Khan</div>
+        <div class="pvenue">Advances in Neural Information Processing Systems (NeurIPS), 2022</div>
+        <div class="plinks">
+          <a href="https://arxiv.org/abs/2210.03586">Paper</a>
+          <a href="https://github.com/winci-ai/CW-RGP">Code</a>
+        </div>
+      </div>
+    </article>
 
-<h3>Miscellaneous<a name="Ms"></a></h3>
+    <h3>Multimodal Models</h3>
 
-<ul>
-  <li><font >I also have great interest in fitness, singing and guitar. </font>
-  </li>
-</ul>
+    <article class="paper">
+      <div class="pimg"><img src="img/tennis_expert.webp" width="480" height="262" loading="lazy" alt="TennisExpert framework overview"></div>
+      <div class="pbody">
+        <span class="venue">arXiv 2026</span>
+        <div class="ptitle">TennisExpert: Towards Expert-Level Analytical Sports Video Understanding</div>
+        <div class="pauthors">Zhaoyu Liu, <b>Xi Weng</b>, Lianyu Hu, Zhe Hou, Kan Jiang, Jin Song Dong, Yang Liu</div>
+        <div class="pvenue">arXiv:2603.13397</div>
+        <div class="plinks">
+          <a href="https://arxiv.org/abs/2603.13397">Paper</a>
+          <a href="https://github.com/LZYAndy/TennisExpert">Code</a>
+        </div>
+      </div>
+    </article>
 
-<hr>
+    <article class="paper">
+      <div class="pimg"><img src="img/tinyllava_video.webp" width="480" height="288" loading="lazy" alt="TinyLLaVA-Video architecture"></div>
+      <div class="pbody">
+        <span class="venue">ICME 2026</span>
+        <div class="ptitle">TinyLLaVA-Video: Towards Smaller LMMs for Video Understanding with Group Resampler</div>
+        <div class="pauthors">Xingjian Zhang, <b>Xi Weng</b>, Yihao Yue, Zhaoxin Fan, Wenjun Wu, Lei Huang</div>
+        <div class="pvenue">IEEE International Conference on Multimedia and Expo (ICME), 2026</div>
+        <div class="plinks">
+          <a href="https://arxiv.org/abs/2501.15513">Paper</a>
+          <a href="https://github.com/ZhangXJ199/TinyLLaVA-Video">Code</a>
+        </div>
+      </div>
+    </article>
 
-<div class="plinks">
-	 Main Co-authors: [<a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a>] | [<a href="https://huangleibuaa.github.io/">Lei Huang</a>] | [<a href="https://sites.google.com/view/fahadkhans/home?pli=1">Fahad Shahbaz Khan</a>] 
-</div>
+    <article class="paper">
+      <div class="pimg"><img src="img/tinyllava_factory.webp" width="480" height="276" loading="lazy" alt="TinyLLaVA Factory overview"></div>
+      <div class="pbody">
+        <span class="venue">arXiv 2024</span>
+        <div class="ptitle">TinyLLaVA Factory: A Modularized Codebase for Small-scale Large Multimodal Models</div>
+        <div class="pauthors">Junlong Jia*, Ying Hu*, <b>Xi Weng*</b>, Yiming Shi, Miao Li, Xingjian Zhang, Baichuan Zhou, Ziyu Liu, Jie Luo, Lei Huang, Ji Wu</div>
+        <div class="pvenue">arXiv:2405.11788</div>
+        <div class="plinks">
+          <a href="https://arxiv.org/abs/2405.11788">Paper</a>
+          <a href="https://github.com/TinyLLaVA/TinyLLaVA_Factory">Code</a>
+          <img class="stars" src="https://img.shields.io/github/stars/TinyLLaVA/TinyLLaVA_Factory?style=social" height="20" loading="lazy" alt="GitHub stars">
+        </div>
+      </div>
+    </article>
 
+    <article class="paper">
+      <div class="pimg"><img src="img/tinyllava.webp" width="480" height="299" loading="lazy" alt="TinyLLaVA framework"></div>
+      <div class="pbody">
+        <span class="venue">arXiv 2024</span>
+        <div class="ptitle">TinyLLaVA: A Framework of Small-scale Large Multimodal Models</div>
+        <div class="pauthors">Baichuan Zhou, Ying Hu, <b>Xi Weng</b>, Junlong Jia, Jie Luo, Xien Liu, Ji Wu, Lei Huang</div>
+        <div class="pvenue">arXiv:2402.14289</div>
+        <div class="plinks">
+          <a href="https://arxiv.org/abs/2402.14289">Paper</a>
+          <a href="https://github.com/DLCV-BUAA/TinyLLaVABench">Code</a>
+        </div>
+      </div>
+    </article>
+  </section>
 
-<font >
-</font>
+  <!-- ===== Education ===== -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="timeline">
+      <li>
+        <time>Jan 2025 – Present</time>
+        <div>
+          <div class="tl-title">Ph.D. in Computer Science, National University of Singapore</div>
+          <div class="tl-sub">Advisor: Prof. <a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a></div>
+        </div>
+      </li>
+      <li>
+        <time>Sep 2022 – Dec 2024</time>
+        <div>
+          <div class="tl-title">M.Sc. in Artificial Intelligence, Beihang University</div>
+          <div class="tl-sub">Advisor: Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a></div>
+        </div>
+      </li>
+      <li>
+        <time>Sep 2018 – Jun 2022</time>
+        <div>
+          <div class="tl-title">B.Eng. in Artificial Intelligence, Beihang University</div>
+          <div class="tl-sub">Advisor: Prof. <a href="https://huangleibuaa.github.io/">Lei Huang</a></div>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-1577297-3");
-pageTracker._trackPageview();
-</script>
+  <!-- ===== Honors ===== -->
+  <section id="honors">
+    <h2>Awards &amp; Honors</h2>
+    <ul class="dated">
+      <li><span>Excellent Graduation Thesis, Beihang University</span><time>2024</time></li>
+      <li><span>Outstanding Graduate, Beihang University</span><time>2024</time></li>
+      <li><span>China National Scholarship</span><time>2023</time></li>
+      <li><span>Excellent Academic Innovation Achievement Award</span><time>2023</time></li>
+    </ul>
+  </section>
 
-<br/>
+  <!-- ===== Service ===== -->
+  <section id="service">
+    <h2>Academic Service</h2>
+    <p><span class="muted">Conference reviewer:</span> ICLR, ICML, NeurIPS (2025, 2026), ECCV 2026</p>
+  </section>
 
-</body>   
-    
+  <!-- ===== Misc ===== -->
+  <section id="misc">
+    <h2>Miscellaneous</h2>
+    <p>Outside research, I enjoy fitness, singing and playing guitar.</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>
+      Frequent collaborators:
+      <a href="https://www.comp.nus.edu.sg/~dongjs/">Jin-Song Dong</a> ·
+      <a href="https://huangleibuaa.github.io/">Lei Huang</a> ·
+      <a href="https://sites.google.com/view/fahadkhans/home">Fahad Shahbaz Khan</a>
+    </p>
+  </div>
+</footer>
+
+</body>
 </html>
